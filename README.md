@@ -2,6 +2,8 @@ mcpi_writing
 ============
 Module for use with mcpi to give access to writing characters with text made of blocks.
 
+![mcpi_writing example](https://dl.dropboxusercontent.com/u/5724095/images/mc_py_writing1.PNG)
+
 ```python
 from mcpi_writing import draw_str
 
