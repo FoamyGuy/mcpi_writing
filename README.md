@@ -2,7 +2,7 @@ mcpi_writing
 ============
 Module for use with mcpi to give access to writing characters with text made of blocks.
 
-```
+```python
 mc = minecraft.Minecraft.create()
 pos = mc.player.getPos()
 
