@@ -9,8 +9,14 @@ pos = mc.player.getPos()
 # Draw a string
 draw_str(pos.x, pos.y, pos.z - 1, "hello world")
 
-# Speficy foreground and background blocks
+# Specify foreground and background blocks
 draw_str(pos.x, pos.y, pos.z - 1, "hello world", fg_block=57, bg_block=49)
+
+# With border
+draw_str(pos.x, pos.y, pos.z - 1, "hello world", border=True)
+
+# With newlines
+draw_str(pos.x, pos.y, pos.z - 1, "hello\nworld")
 ```
 
 Music for youtube video:
