@@ -3,6 +3,8 @@ mcpi_writing
 Module for use with mcpi to give access to writing characters with text made of blocks.
 
 ```python
+from mcpi_writing import draw_str
+
 mc = minecraft.Minecraft.create()
 pos = mc.player.getPos()
 
