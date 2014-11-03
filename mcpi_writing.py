@@ -1,35 +1,36 @@
 import mcpi.minecraft as minecraft
+
 mc = minecraft.Minecraft.create()
 
 
-
 def fill(start_x, start_y, start_z, block=49, size=5):
-    for x in range(0,size):
-        for y in range(0,5):
+    for x in range(0, size):
+        for y in range(0, 5):
             mc.setBlock(start_x + x, start_y + y, start_z, block)
+
 
 def a(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
-    
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
 
-        
+
 def b(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,4):
+    for width in range(0, 4):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
@@ -42,25 +43,26 @@ def b(x, y, z, fg_block=57, bg_block=49):
 def c(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
+
 
 def d(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
         if (height < 4) and (height > 0):
             mc.setBlock(x + 4, y + height, z, fg_block)
-    
+
     # horizontal lines
-    for width in range(0,4):
+    for width in range(0, 4):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
 
@@ -68,119 +70,124 @@ def d(x, y, z, fg_block=57, bg_block=49):
 def e(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
 
+
 def f(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         if (width < 4):
             mc.setBlock(x + width, y + 2, z, fg_block)
 
-            
+
 def g(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
         if height < 3:
             mc.setBlock(x + 4, y + height, z, fg_block)
-            
-        
-    
+
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
         if (width > 1):
             mc.setBlock(x + width, y + 2, z, fg_block)
         if (width < 4):
             mc.setBlock(x + width, y + 4, z, fg_block)
 
+
 def h(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
-    
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 2, z, fg_block)
 
-        
+
 def i(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 2, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
-        
-        
+
+
 def j(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 3, y + height, z, fg_block)
         if height < 2:
             mc.setBlock(x + 0, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         if width < 4:
             mc.setBlock(x + width, y + 0, z, fg_block)
         if width > 1:
             mc.setBlock(x + width, y + 4, z, fg_block)
-            
+
+
 def k(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
         if height == 2:
             mc.setBlock(x + 1, y + height, z, fg_block)
 
-    
+
     # Diagnal lines
     mc.setBlock(x + 2, y + 1, z, fg_block)
     mc.setBlock(x + 2, y + 3, z, fg_block)
     mc.setBlock(x + 3, y + 0, z, fg_block)
     mc.setBlock(x + 3, y + 4, z, fg_block)
-    
+
+
 def l(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 0, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
-        
+
+
 def m(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,4):
+    for height in range(0, 4):
         mc.setBlock(x + 0, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
         if (height > 1) and (height < 5):
@@ -189,18 +196,19 @@ def m(x, y, z, fg_block=57, bg_block=49):
     mc.setBlock(x + 1, y + 4, z, fg_block)
     mc.setBlock(x + 3, y + 4, z, fg_block)
 
+
 def n(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 0, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
         if (height > 2):
             mc.setBlock(x + 1, y + height, z, fg_block)
-            
+
         if (height > 1) and (height < 4):
             mc.setBlock(x + 2, y + height, z, fg_block)
-            
+
         if (height > 0) and (height < 3):
             mc.setBlock(x + 3, y + height, z, fg_block)
 
@@ -208,78 +216,82 @@ def n(x, y, z, fg_block=57, bg_block=49):
 def o(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         if (height > 0) and (height < 4):
             mc.setBlock(x + 0, y + height, z, fg_block)
             mc.setBlock(x + 4, y + height, z, fg_block)
-            
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         if (width > 0) and (width < 4):
             mc.setBlock(x + width, y + 0, z, fg_block)
             mc.setBlock(x + width, y + 4, z, fg_block)
-        
+
+
 def p(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        if(height == 3):
+        if (height == 3):
             mc.setBlock(x + 4, y + height, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,4):
+    for width in range(0, 4):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
+
 
 def q(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         if (height > 0) and (height < 4):
             mc.setBlock(x + 0, y + height, z, fg_block)
-            if(height > 1):
+            if (height > 1):
                 mc.setBlock(x + 4, y + height, z, fg_block)
-            
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         if (width > 0) and (width < 4):
             mc.setBlock(x + width, y + 4, z, fg_block)
-            if(width < 3):
+            if (width < 3):
                 mc.setBlock(x + width, y + 0, z, fg_block)
     # diagnal line
     mc.setBlock(x + 4, y, z, fg_block)
     mc.setBlock(x + 3, y + 1, z, fg_block)
 
+
 def r(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, fg_block)
-        if(height > 2):
+        if height > 2:
             mc.setBlock(x + 4, y + height, z, fg_block)
-            
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
-    
+
     mc.setBlock(x + 4, y + 0, z, fg_block)
     mc.setBlock(x + 3, y + 1, z, fg_block)
+
 
 def s(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         if (height < 3):
             mc.setBlock(x + 4, y + height, z, fg_block)
-        if(height > 2):
+        if (height > 2):
             mc.setBlock(x + 0, y + height, z, fg_block)
-            
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 0, z, fg_block)
@@ -288,46 +300,49 @@ def s(x, y, z, fg_block=57, bg_block=49):
 def t(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 2, y + height, z, fg_block)
-        
-            
-    
+
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
+
 
 def u(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (1,5):
+    for height in range(1, 5):
         mc.setBlock(x + 0, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
-        
-            
-    
+
+
+
     # horizontal lines
-    for width in range(1,4):
+    for width in range(1, 4):
         mc.setBlock(x + width, y + 0, z, fg_block)
+
 
 def v(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
-        if(height > 2):
+    for height in range(0, 5):
+        if (height > 2):
             mc.setBlock(x + 0, y + height, z, fg_block)
             mc.setBlock(x + 4, y + height, z, fg_block)
-        if(height < 3) and (height > 0):
+        if (height < 3) and (height > 0):
             mc.setBlock(x + 1, y + height, z, fg_block)
             mc.setBlock(x + 3, y + height, z, fg_block)
-    
+
     # bottom dot
-    mc.setBlock(x + 2, y + 0, z, fg_block)        
-    
+    mc.setBlock(x + 2, y + 0, z, fg_block)
+
+
 def w(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (1,5):
+    for height in range(1, 5):
         mc.setBlock(x + 0, y + height, z, fg_block)
         mc.setBlock(x + 4, y + height, z, fg_block)
         if (height > 0) and (height < 3):
@@ -340,19 +355,20 @@ def w(x, y, z, fg_block=57, bg_block=49):
 def eks(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
-        if(height == 0) or (height == 4):
+    for height in range(0, 5):
+        if (height == 0) or (height == 4):
             mc.setBlock(x + 0, y + height, z, fg_block)
             mc.setBlock(x + 4, y + height, z, fg_block)
-        if(height == 1) or (height == 3):
+        if (height == 1) or (height == 3):
             mc.setBlock(x + 1, y + height, z, fg_block)
             mc.setBlock(x + 3, y + height, z, fg_block)
     mc.setBlock(x + 2, y + 2, z, fg_block)
-    
+
+
 def why(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         if height == 4:
             mc.setBlock(x + 0, y + height, z, fg_block)
             mc.setBlock(x + 4, y + height, z, fg_block)
@@ -360,18 +376,19 @@ def why(x, y, z, fg_block=57, bg_block=49):
             mc.setBlock(x + 1, y + height, z, fg_block)
             mc.setBlock(x + 3, y + height, z, fg_block)
         if (height < 3):
-            mc.setBlock(x + 2, y + height, z, fg_block)    
+            mc.setBlock(x + 2, y + height, z, fg_block)
+
 
 def zee(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
 
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         if (width < 4):
             mc.setBlock(x + width, y + 0, z, fg_block)
         if (width > 0):
             mc.setBlock(x + width, y + 4, z, fg_block)
-    
+
     # center diagonal 
     mc.setBlock(x + 1, y + 3, z, fg_block)
     mc.setBlock(x + 2, y + 2, z, fg_block)
@@ -381,12 +398,11 @@ def zee(x, y, z, fg_block=57, bg_block=49):
 def one(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 2, y + height, z, fg_block)
-        
-    
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
         if (width > 0) and (width < 3):
             mc.setBlock(x + width, y + 4, z, fg_block)
@@ -397,41 +413,43 @@ def two(x, y, z, fg_block=57, bg_block=49):
     # vertical lines
     mc.setBlock(x, y + 1, z, fg_block)
     mc.setBlock(x + 4, y + 3, z, fg_block)
-        
-    
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 4, z, fg_block)
-        
+
+
 def three(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range(1,4):
+    for height in range(1, 4):
         mc.setBlock(x + 4, y + height, z, fg_block)
 
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         if (width < 4):
             mc.setBlock(x + width, y + 0, z, fg_block)
             mc.setBlock(x + width, y + 4, z, fg_block)
         if (width > 0):
             mc.setBlock(x + width, y + 2, z, fg_block)
 
+
 def four(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range(0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 4, y + height, z, fg_block)
-        if(height > 1):
+        if (height > 1):
             mc.setBlock(x + 0, y + height, z, fg_block)
-            
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 2, z, fg_block)
 
-        
+
 def five(x, y, z, fg_block=57, bg_block=49):
     s(x, y, z, fg_block, bg_block)
 
@@ -439,13 +457,13 @@ def five(x, y, z, fg_block=57, bg_block=49):
 def six(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range(0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 0, y + height, z, fg_block)
-        if(height < 3):
+        if (height < 3):
             mc.setBlock(x + 4, y + height, z, fg_block)
-            
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 4, z, fg_block)
@@ -454,17 +472,17 @@ def six(x, y, z, fg_block=57, bg_block=49):
 def seven(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range(0,2):
+    for height in range(0, 2):
         mc.setBlock(x + 2, y + height, z, fg_block)
     mc.setBlock(x + 3, y + 2, z, fg_block)
-    mc.setBlock(x + 4, y + 3, z, fg_block)    
-    
-            
+    mc.setBlock(x + 4, y + 3, z, fg_block)
+
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 4, z, fg_block)
 
-        
+
 def eight(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical dots
@@ -474,7 +492,7 @@ def eight(x, y, z, fg_block=57, bg_block=49):
     mc.setBlock(x + 0, y + 3, z, fg_block)
 
     # horizontal lines
-    for width in range(1,4):
+    for width in range(1, 4):
         mc.setBlock(x + width, y + 0, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 4, z, fg_block)
@@ -482,9 +500,9 @@ def eight(x, y, z, fg_block=57, bg_block=49):
 
 def nine(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
-    
+
     # horizontal lines
-    for height in range(1,4):
+    for height in range(1, 4):
         mc.setBlock(x + 4, y + height, z, fg_block)
 
     # vertical dots
@@ -492,7 +510,7 @@ def nine(x, y, z, fg_block=57, bg_block=49):
     mc.setBlock(x + 0, y + 3, z, fg_block)
 
     # horizontal lines
-    for width in range(1,4):
+    for width in range(1, 4):
         mc.setBlock(x + width, y + 0, z, fg_block)
         mc.setBlock(x + width, y + 2, z, fg_block)
         mc.setBlock(x + width, y + 4, z, fg_block)
@@ -500,11 +518,10 @@ def nine(x, y, z, fg_block=57, bg_block=49):
 
 def zero(x, y, z, fg_block=57, bg_block=49):
     o(x, y, z, fg_block, bg_block)
-    
+
 
 def period(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block, size=1)
-    
 
     mc.setBlock(x + 0, y + 0, z, fg_block)
 
@@ -513,11 +530,13 @@ def comma(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block, size=2)
     mc.setBlock(x + 0, y + 0, z, fg_block)
     mc.setBlock(x + 1, y + 1, z, fg_block)
-    
+
+
 def colon(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block, size=1)
     mc.setBlock(x + 0, y + 1, z, fg_block)
     mc.setBlock(x + 0, y + 3, z, fg_block)
+
 
 def semicolon(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block, size=2)
@@ -525,33 +544,37 @@ def semicolon(x, y, z, fg_block=57, bg_block=49):
     mc.setBlock(x + 1, y + 1, z, fg_block)
     mc.setBlock(x + 1, y + 3, z, fg_block)
 
+
 def plus(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
-    for height in range(0,5):
+    for height in range(0, 5):
         mc.setBlock(x + 2, y + height, z, fg_block)
-    
+
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 2, z, fg_block)
-        
+
+
 def minus(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 2, z, fg_block)
+
 
 def equals(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 1, z, fg_block)
         mc.setBlock(x + width, y + 3, z, fg_block)
 
+
 def times(x, y, z, fg_block=57, bg_block=49):
     eks(x, y, z, fg_block=57, bg_block=49)
-    
-    
+
+
 def divide(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # vertical lines
@@ -565,25 +588,25 @@ def divide(x, y, z, fg_block=57, bg_block=49):
 def underscore(x, y, z, fg_block=57, bg_block=49):
     fill(x, y, z, bg_block)
     # horizontal lines
-    for width in range(0,5):
+    for width in range(0, 5):
         mc.setBlock(x + width, y + 0, z, fg_block)
 
-    
+
 def letter_space(x, y, z, block=49):
     # vertical lines
-    for height in range (0,5):
+    for height in range(0, 5):
         mc.setBlock(x, y + height, z, block)
 
 
-def draw_str(x, y, z,str, fg_block=57, bg_block=49):
+def draw_str(x, y, z, str, fg_block=57, bg_block=49, border=False):
     lines = str.split("\n")
-    cur_y = ((len(lines)-1) * 6) + y
+    cur_y = ((len(lines) - 1) * 6) + y
     last_line = len(lines) - 1
     for j, line in enumerate(lines):
         last = len(line) - 1
         cur_x = x
         line_width = 0
-        
+
         for i, letter in enumerate(line):
             if letter == ' ':
                 alphabet[letter](cur_x, cur_y, z, bg_block)
@@ -597,33 +620,44 @@ def draw_str(x, y, z,str, fg_block=57, bg_block=49):
             else:
                 alphabet[letter](cur_x, cur_y, z, fg_block, bg_block)
                 letter_width = 5
-            
+
             if i != last:
-                letter_space(cur_x + letter_width ,cur_y , z, bg_block)
-            cur_x += letter_width+1
-            line_width += letter_width+1
-        
-            
+                letter_space(cur_x + letter_width, cur_y, z, bg_block)
+            cur_x += letter_width + 1
+            line_width += letter_width + 1
+
+        if border:
+            # border on top
+            for width in range(0, line_width - 1):
+                mc.setBlock(x + width, cur_y + 5, z, bg_block)
+
+            # left border
+            for height in range(-1, 6):
+                mc.setBlock(x - 1, cur_y + height, z, bg_block)
+
+            # right border
+            for height in range(-1, 6):
+                mc.setBlock(x + line_width - 1, cur_y + height, z, bg_block)
+
         # fill empty line
-        if(j != last_line):
-            
-            for width in range (0, line_width - 1):
-                mc.setBlock(x + width, cur_y - 1, z, bg_block)
+        for width in range(0, line_width - 1):
+            mc.setBlock(x + width, cur_y - 1, z, bg_block)
         cur_y -= 6
-        
+
+
 alphabet = {'a': a, 'b': b, 'c': c, 'd': d, 'e': e,
             'f': f, 'g': g, 'h': h, 'i': i, 'j': j,
-            'k': k, 'l': l, 'm': m, 'n': n, 'o': o, 
-            'p': p, 'q': q, 'r': r, 's': s, 't': t, 
-            'u': u, 'v': v, 'w': w, 'x': eks, 
+            'k': k, 'l': l, 'm': m, 'n': n, 'o': o,
+            'p': p, 'q': q, 'r': r, 's': s, 't': t,
+            'u': u, 'v': v, 'w': w, 'x': eks,
             'y': why, 'z': zee, ' ': fill,
             '1': one, '2': two, '3': three, '4': four,
             '5': five, '6': six, '7': seven, '8': eight,
             '9': nine, '0': zero,
             '.': period, ',': comma, ':': colon,
-            '+': plus,   '-': minus, '=': equals,
-            '*': times,  '/': divide, '_': underscore}
-        
+            '+': plus, '-': minus, '=': equals,
+            '*': times, '/': divide, '_': underscore}
+
 if __name__ == "__main__":
     pos = mc.player.getPos()
-    draw_str(pos.x, pos.y, pos.z - 1, "hello world", fg_block=57, bg_block=49)
+    draw_str(pos.x, pos.y + 1, pos.z - 1, "hi\nthere", fg_block=49, bg_block=133, border=True)
