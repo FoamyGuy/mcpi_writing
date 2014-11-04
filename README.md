@@ -30,6 +30,13 @@ SOUTH = 0
 draw_str(pos.x, pos.y, pos.z - 1, "hello", facing=SOUTH)
 draw_str(pos.x, pos.y, pos.z - 1, "hello", facing=NORTH)
 
+# numbers
+draw_str(pos.x, pos.y, pos.z - 1, "0123456789")
+
+# characters currently limited to these:
+draw_str(pos.x, pos.y, pos.z - 1, ".,-+/*=:;")
+
+
 ```
 
 I used Canarymod and RaspberryJuice, but theoretically it should work on the Raspberry Pi edition of MC too.
