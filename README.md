@@ -1,6 +1,7 @@
 mcpi_writing
 ============
 Module for use with mcpi to give access to writing characters with text made of blocks.
+
 Demo Video: http://youtu.be/HoamEiueMe0
 
 ![mcpi_writing example](https://dl.dropboxusercontent.com/u/5724095/images/mcpi_writing_gh.png)
@@ -22,12 +23,19 @@ draw_str(pos.x, pos.y, pos.z - 1, "hello world", border=True)
 
 # With newlines
 draw_str(pos.x, pos.y, pos.z - 1, "hello\nworld")
+
+# facing north or south (currently no support for EAST/WEST)
+NORTH = 2
+SOUTH = 0
+draw_str(pos.x, pos.y, pos.z - 1, "hello", facing=SOUTH)
+draw_str(pos.x, pos.y, pos.z - 1, "hello", facing=NORTH)
+
 ```
 
 I used Canarymod and RaspberryJuice, but theoretically it should work on the Raspberry Pi edition of MC too.
 
-http://canarymod.net/
-https://github.com/martinohanlon/CanaryRaspberryJuice
+- http://canarymod.net/
+- https://github.com/martinohanlon/CanaryRaspberryJuice
 
 Music for youtube video:
 https://soundcloud.com/thebrogrammer/cheese

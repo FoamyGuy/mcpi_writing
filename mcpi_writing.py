@@ -604,14 +604,12 @@ def draw_str(x, y, z, str, fg_block=57, bg_block=49, border=False, facing=NORTH)
     lines = str.split("\n")
     cur_y = ((len(lines) - 1) * 6) + y
     last_line = len(lines) - 1
-    import time
     for j, line in enumerate(lines):
         last = len(line) - 1
         cur_x = x
         line_width = 0
 
         for i, letter in enumerate(line):
-            time.sleep(1)
             if letter == ' ':
                 alphabet[letter](cur_x, cur_y, z, bg_block, facing=facing)
                 letter_width = 5
@@ -664,4 +662,4 @@ alphabet = {'a': a, 'b': b, 'c': c, 'd': d, 'e': e,
 
 if __name__ == "__main__":
     pos = mc.player.getPos()
-    draw_str(pos.x, pos.y + 1, pos.z - 1, "hello", fg_block=74, bg_block=49, border=True, facing=NORTH)
+    draw_str(pos.x, pos.y + 1, pos.z - 1, "hello\nworld", fg_block=74, bg_block=49, border=True, facing=SOUTH)
